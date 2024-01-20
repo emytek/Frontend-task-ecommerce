@@ -1,0 +1,313 @@
+/* Nav.module.css */
+.nav {
+    /* height: 100px; */
+    /* margin-top: -80px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: 0.8s all ease;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav {
+      transition: 0.8s all ease;
+      height: 50px;
+    }
+  }
+  
+  .navbar {
+    /* height: 100px; */
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    padding: 19px;
+    /* padding: 0.24px;
+    max-width: 1100px; */
+  }
+  
+  @media screen and (min-width: 992px) {
+    .navbar {
+      box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.10)
+    }
+  }
+  
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navlogo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: .5rem; */
+    margin-bottom: 0.4rem;
+  }
+  
+  /* @media screen and (max-width: 768px) {
+    .navlogo {
+      margin-top: 1rem !important;
+    }
+  } */
+  
+  
+  .small-image {
+    width: 89px; 
+    height: auto;
+    margin-top: 25px;
+    /* margin-bottom: 20px; */
+  }
+  
+  .mobileicon {
+    display: none;
+  
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: absolute;
+      margin-top: 14px;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+  }
+  
+  .navmenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin-right: -22px;
+    margin-bottom: 0.4rem;
+  
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contactLink {
+      color: #FFFFFB;
+    }
+  }
+  /* .navitem {
+    height: 100px; 
+  } */
+  
+  .navlinks {
+    color: #2A2728 !important;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+  }
+  .navitem a:hover {
+    color: #F2656F !important; 
+  }
+  
+  .navbtn{
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    margin-bottom: .3rem;
+  } 
+  @media screen and (max-width: 768px) {
+    .navbtn {
+      display: none;
+    }
+  }
+  
+  
+  /* .navbtnlink{
+    border-radius: 50px;
+    background: #01bf71;
+    white-space: no-wrap;
+    padding: 10px 22px;
+    color: #000;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+  } */
+  
+  .navbtnlink1{
+    color: #F2656F !important;
+    white-space: no-wrap;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    margin-right: 18px;
+  }
+  
+  .navbtnlink2{
+    background-color: #F2656F;
+    color: white;
+    white-space: no-wrap;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    width: 151px;
+    height: 40px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .sidebarcontain {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #512225;
+    display: grid;
+    align-items: center;
+    top: 0;
+    left: 20;
+    transition: .3s ease-in-out;
+    top: 0;
+    padding-left: 20px;
+  }
+  
+  .closeicon{
+    color: #fff;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .sidebarwrapper {
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  .sidebarmenu {
+    /* display: grid;
+    grid-template-columns: 1fr; */
+    /* grid-template-rows: repeat(6, 80px); */
+    list-style: none;
+    padding: 0; /* Reset padding */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* @media screen and (max-width: 480px) {
+    .sidebarmenu {
+      grid-template-rows: repeat(6, 60px);
+    }
+  } */
+  
+  .sidebarlink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -.48px;
+    text-decoration: none;
+    list-style: none;
+    transition: .2s ease-in-out;
+    text-decoration: none;
+    color: #FFFFFB;
+  
+  }
+  .sidebtnwrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  .sidebarroute{
+    border-radius: 50px;
+    background: #01bf71;
+    white-space: no-wrap;
+    padding: 16px 64px;
+    color: #010606;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+  }
+  
+  .sidebtnlink1{
+    border: 1px solid #FFFFFB;
+    border-radius: 5px;
+    padding: 10px 30px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    color: #FFFFFB;
+  }
+  
+  .sidebtnlink2{
+    border: 1px solid #FFFFFB;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background: #F2656F;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+    color: #FFFFFB;
+    margin-top: 10px;
+  }
+  
+  .sidebtnlink1,
+  .sidebtnlink2 {
+    list-style-type: none; /* Remove bullet points */
+    /* Your other styles for these elements */
+  }
+  
+  .open {
+    opacity: 1;
+    pointer-events: auto; /* Enable pointer events when visible */
+  }
