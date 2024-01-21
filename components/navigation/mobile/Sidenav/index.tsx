@@ -1,15 +1,21 @@
 import React, { useState } from "react";
 import styles from "../styles/styles.module.css";
+import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+interface SidebarProps {
+  isOpen: boolean;
+  toggleSidebar: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
       className={`${styles.sidebarcontain} ${isOpen ? styles.open : ""}`}
       style={{ top: isOpen ? "0" : "-100%", opacity: isOpen ? "1" : "0" }}
     >
       <div className={styles.icon} onClick={toggleSidebar}>
-        <Image src="/mobile/close-sde.png" alt="" />
+        <FaTimes size={24} color="red" />
       </div>
       <div className={styles.sidebarwrapper}>
         <ul className={styles.sidebarmenu}>

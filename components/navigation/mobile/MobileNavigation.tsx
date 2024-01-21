@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Newnav from "../../components/Landing/components/Newnav";
-import Sidebar from "../../components/Landing/components/Newsidenav";
+import Newnav from "./Newnav";
+import Sidebar from "./Sidenav";
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);

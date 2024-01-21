@@ -1,10 +1,18 @@
 import React from "react";
-import { FaBars } from "react-icons/fa";
+import { useMediaQuery, Theme } from "@mui/material";
+import { Typography } from "@mui/material";
 import styles from "../styles/styles.module.css";
-import Link from "next/link";
+import { Link } from "@mui/material";
 
-const Newnav = ({ toggleSidebar }) => {
-  const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
+interface NewnavProps {
+  toggleSidebar: () => void;
+}
+
+const Newnav: React.FC<NewnavProps> = ({ toggleSidebar }) => {
+  const isSmallScreen = useMediaQuery("(max-width: 768px)");
+  const isMediumUp = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.up("md")
+  );
 
   return (
     <>
@@ -12,20 +20,22 @@ const Newnav = ({ toggleSidebar }) => {
         <div className={styles.navbar}>
           <Link
             href="/"
-            style={{ textDecoration: "none", cursor: "pointer" }}
+            sx={{
+              textDecoration: "none",
+              cursor: "pointer",
+              ...(isMediumUp && { display: "none" }), // Hide on medium screens and up
+            }}
             className={styles.center}
           >
-            <Image
-              src="/logo.svg"
-              alt="CredibLogo"
-              className={`${
-                isSmallScreen ? styles["small-image"] : styles["navlogo"]
-              }`}
-              cursor="pointer"
+            <img
+              src="/logo/Bandage.png"
+              alt="Logo"
+              className={isSmallScreen ? "small-image" : "navlogo"}
+              style={{ cursor: "pointer" }}
             />
           </Link>
           <div className={styles.mobileicon} onClick={toggleSidebar}>
-            <FaBars size="22px" />
+            <img src="/icons/menu.png" alt="" />
           </div>
           <ul className={styles.navmenu}>
             <li className={styles.navitem}>

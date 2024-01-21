@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { FaBars, FaTwitter } from "react-icons/fa";
+// import Image from "next/image"
 import styles from "./styles.module.css";
-import { links, social, venLinks } from "./utils/data";
-import Link from "next/link";
+import { links } from "../../../utils/NavData";
 
 const DesktopNav = () => {
   const [showLinks, setShowLinks] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const linksRef = (useRef < HTMLUListElement) | (null > null);
-  const linksContainerRef = (useRef < HTMLDivElement) | (null > null);
+  const linksRef = useRef<HTMLUListElement | null>(null);
+  const linksContainerRef = useRef<HTMLDivElement | null>(null);
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -48,31 +47,28 @@ const DesktopNav = () => {
   return (
     <nav
       style={{
-        position: "fixed",
-        top: 0,
         width: "100%",
-        zIndex: 1000,
         backgroundColor: "white",
       }}
     >
       <div className={styles["nav-center"]}>
         <div className={styles["nav-header"]}>
-          <Link href="/">
-            <Image
-              src="/logo.svg"
-              alt="CredibLogo"
-              cursor="pointer"
+          <a href="/">
+            <img
+              src="/logo/Bandage.png"
+              alt="BandageLogo"
+              style={{ cursor: "pointer" }}
               className={`${styles["nav-logo"]} ${
                 isSmallScreen ? styles["small-image"] : ""
               }`}
             />
-          </Link>
+          </a>
 
           <button
             className={styles["nav-toggle"]}
             onClick={() => setShowLinks(!showLinks)}
           >
-            <FaBars />
+            <img src="/menu.png" alt="" />
           </button>
         </div>
 
@@ -85,13 +81,23 @@ const DesktopNav = () => {
               // Define linkStyles here
               const linkStyles = {
                 display: shouldDisplay ? "block" : "none",
-                ...(text === "become a vendor" && isSmallScreen
+                ...(text === "About" && isSmallScreen
                   ? { color: "#F2656F" }
                   : {}),
                 ...(text === "get started" && isSmallScreen
                   ? { color: "#F2656F" }
                   : {}),
               };
+              return (
+                <li
+                  key={id}
+                  style={{ marginBottom: "14px", marginLeft: ".9rem" }}
+                >
+                  <a href={url} style={linkStyles}>
+                    {text}
+                  </a>
+                </li>
+              );
             })}
           </ul>
         </div>
@@ -111,7 +117,7 @@ const DesktopNav = () => {
                 justifyContent: "center",
               }}
             >
-              <Link href="/vendor-onboard">Become a Vendor</Link>
+              <a href="/vendor-onboard">start</a>
             </li>
             <li></li>
           </ul>

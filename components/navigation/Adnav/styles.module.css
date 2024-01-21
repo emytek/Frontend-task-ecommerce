@@ -1,0 +1,53 @@
+/* Navbar.module.css */
+
+.appBar {
+    background-color: #23856D;
+    width: 100%; /* Make the navbar take full width */
+    height: 58px;
+    max-width: 1440px;
+    display: none; /* Hide on mobile devices */
+  }
+  
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  
+  .textA {
+    margin-right: 16px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+  
+  .middleSection {
+    flex: 1;
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+  
+  .socialIcons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  .socialText {
+    margin-left: 8px;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+  
