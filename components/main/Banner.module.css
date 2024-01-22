@@ -1,0 +1,102 @@
+/* styles/Banner.module.css */
+.banner {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 4.5rem;
+}
+
+.mobileImageContainer {
+  display: none;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subsection {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* styles/Image.module.css */
+.images {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1025px) {
+  .firstImage {
+    width: 451px;
+    height: 616px;
+  }
+  .secondImage {
+    width: 678px;
+    height: 300px;
+  }
+  .firstSubImg {
+    /* width: 331px; */
+    height: 300px;
+  }
+  .secondSubImg {
+    /* width: 331px; */
+    height: 300px;
+  }
+}
+
+/* Responsive styling for small and medium screens */
+@media only screen and (max-width: 560px) {
+  .mobileImageContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    place-items: center;
+  }
+  /* Set the width and height for images on small and medium screens */
+  .mobileImages {
+    width: 331px;
+    height: 270px;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+
+  .banner {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 561px) and (max-width: 768px) {
+  .mobileImageContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    place-items: center;
+  }
+
+  .mobileImages {
+    width: 400px;
+    height: 300px;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+
+  .banner {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .secondSubImg {
+    display: none;
+  }
+  .firstImage {
+    width: 351px;
+    height: 616px;
+  }
+  .secondImage {
+    width: 478px;
+    height: 300px;
+  }
+}

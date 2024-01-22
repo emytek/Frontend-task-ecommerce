@@ -4,6 +4,8 @@ import Adnav from "../components/navigation/Adnav";
 import { useMediaQuery, Hidden } from "@mui/material";
 import MobileNav from "../components/navigation/mobile/MobileNavigation";
 import DesktopNav from "../components/navigation/desktop/DesktopNavigation.tsx";
+import Banner from "../components/main/Banner.tsx";
+import ProductList from "../components/products/ProductList";
 
 export default function Home() {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("lg"));
@@ -35,6 +37,8 @@ export default function Home() {
           <DesktopNav style={isMobile ? {} : { marginTop: "4rem" }} />
         </Hidden>
       )}
+      <Banner />
+      <ProductList />
     </div>
   );
 }
