@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.specialTitle {
+  font-size: 14px;
+  color: #23a6f0;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.postSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 80%;
+}
+
+.postCard {
+  border: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.postCard img {
+  max-width: 348px;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.featureTitle {
+  color: #252b42;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+.featureDescription {
+  color: #737373;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive styling for small screens */
+@media only screen and (max-width: 767px) {
+  .postSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}

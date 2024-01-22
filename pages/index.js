@@ -6,6 +6,8 @@ import MobileNav from "../components/navigation/mobile/MobileNavigation";
 import DesktopNav from "../components/navigation/desktop/DesktopNavigation.tsx";
 import Banner from "../components/main/Banner.tsx";
 import ProductList from "../components/products/ProductList";
+import ServiceCards from "../components/ServiceCards";
+import PostSection from "../components/PostSection";
 
 export default function Home() {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("lg"));
@@ -40,6 +42,8 @@ export default function Home() {
       )}
       <Banner />
       <ProductList />
+      <ServiceCards />
+      <PostSection />
     </div>
   );
 }

@@ -1,0 +1,45 @@
+/* styles/ServiceSection.module.css */
+
+.serviceSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.serviceCard {
+  border: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.serviceCard img {
+  max-width: 72px;
+  width: 100%;
+  max-height: 72px;
+  object-fit: cover;
+}
+
+.featureTitle {
+  color: #252b42;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+.featureDescription {
+  color: #737373;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive styling for small screens */
+@media only screen and (max-width: 767px) {
+  .serviceSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
