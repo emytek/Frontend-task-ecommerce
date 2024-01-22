@@ -37,14 +37,21 @@ const ProductList = () => {
           <div key={product.id} className={styles.productCard}>
             <img src={product.images[0]} alt={`Product ${product.id}`} />
             <div className={styles.productDetails}>
-              <p>{product.brand}</p>
-              <p>
-                ${product.price.toFixed(2)} (Discount: $
-                {(product.price * (product.discountPercentage / 100)).toFixed(
-                  2
-                )}
-                )
-              </p>
+              <p className={styles.productTitle}>{product.title}</p>
+              <p className={styles.productCategory}>{product.category}</p>
+              <div className={styles.productPriceInfo}>
+                <div>
+                  <p className={styles.productPrice}>
+                    ${product.price.toFixed(2)}
+                  </p>
+                </div>
+                <p className={styles.productDiscount}>
+                  $
+                  {(product.price * (product.discountPercentage / 100)).toFixed(
+                    2
+                  )}
+                </p>
+              </div>
             </div>
           </div>
         ))}
