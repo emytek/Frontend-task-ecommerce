@@ -1,0 +1,16 @@
+.wrap {
+  display: flex;
+  align-items: center;
+}
+.irst {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+}
+/* .dra {
+  padding-bottom: 1.6rem;
+}
+.row {
+  padding-bottom: 1.6rem;
+} */

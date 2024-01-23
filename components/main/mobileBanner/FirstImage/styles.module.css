@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.static {
+  max-width: 331px;
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  background-image: url("/pics/cover1.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.textContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.text1 {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  color: #2dc071;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 2px 0;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.text2 {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  color: #252b42;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+.text3 {
+  position: absolute;
+  top: 54px;
+  left: 10px;
+  color: #252b42;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 767px) {
+  .textContainer {
+    padding: 4px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .static {
+    max-width: 451px;
+    max-height: 616px;
+  }
+}

@@ -1,10 +1,20 @@
 import styles from "./Banner.module.css";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import FirstImage from "./mobileBanner/FirstImage";
+import SecondImage from "./mobileBanner/SecondImage";
+import ThirdImage from "./mobileBanner/ThirdImage";
+import FourthImage from "./mobileBanner/FourthImage";
 
 const Banner: React.FC = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery("(max-width:600px)");
+
   return (
     <>
       <div className={styles.banner}>
         <div className={styles.section}>
+          {/* Show the image on large and medium screens */}
           <img
             src="/pics/1pic.png"
             className={`${styles.firstImage} ${styles.images}`}
@@ -36,26 +46,10 @@ const Banner: React.FC = () => {
 
       {/* For mobile */}
       <div className={styles.mobileImageContainer}>
-        <img
-          src="/pics/1pic.png"
-          className={styles.mobileImages}
-          alt="Image 1"
-        />
-        <img
-          src="/pics/2pic.png"
-          className={styles.mobileImages}
-          alt="Image 2"
-        />
-        <img
-          src="/pics/1pic.png"
-          className={styles.mobileImages}
-          alt="Image 3"
-        />
-        <img
-          src="/pics/2pic.png"
-          className={styles.mobileImages}
-          alt="Image 4"
-        />
+        <FirstImage />
+        <SecondImage />
+        <ThirdImage />
+        <FourthImage />
       </div>
     </>
   );
