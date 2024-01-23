@@ -9,6 +9,8 @@ import ProductList from "../components/products/ProductList";
 import ServiceCards from "../components/ServiceCards";
 import PostSection from "../components/PostSection";
 import ClientSection from "../components/ClientSection";
+import SubHero from "../components/SubHero";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("lg"));
@@ -46,6 +48,8 @@ export default function Home() {
       <ServiceCards />
       <PostSection />
       <ClientSection />
+      <SubHero />
+      <Footer />
     </div>
   );
 }

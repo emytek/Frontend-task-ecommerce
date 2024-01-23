@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 import { Container, Typography } from "@material-ui/core";
 
 const ClientSection: React.FC = () => {
-  const isLargeScreen = useMediaQuery("(min-width:600px)");
+  const isLargeScreen = useMediaQuery("(min-width:768px)");
 
   return (
     <div className={styles.wrap}>

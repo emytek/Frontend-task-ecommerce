@@ -1,0 +1,101 @@
+/* styles.module.css */
+
+.inputContain {
+  margin-top: 1.5em;
+  display: flex;
+  max-width: 160px;
+  width: 100%;
+}
+
+.inputContainer {
+  margin-top: 1.5em;
+  display: flex;
+  max-width: 321px;
+  width: 100%;
+}
+
+.inputField {
+  flex: 1;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+}
+
+.inputFieldMobile {
+  flex: 1;
+  /* padding: 15px 20px; */
+  border-radius: 5px;
+  background: #f9f9f9;
+  border: 1px solid #e6e6e6;
+}
+
+.inputFieldPlaceholder {
+  color: #737373;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+.buttonStyle {
+  border-radius: 0px 5px 5px 0px;
+  background-color: #23a6f0;
+  padding: 15px 22.5px;
+}
+
+.buttonTextStyle {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+.lorem {
+  margin-top: 0.3rem;
+  color: #737373;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+}
+
+.textInfo {
+  color: #737373;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  padding-left: 5.8rem;
+}
+.textInfoMobile {
+  color: #737373;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+.copy {
+  padding: 25px 0px;
+  background-color: #fafafa;
+  display: flex;
+  align-items: flex-start;
+  /* padding-left: 4rem; */
+}
+.copyMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #737373;
+  width: 85%;
+}
+
+/* @media only screen and (max-width: 760px) {
+  .inputContainer {
+    max-width: 221px;
+    width: 100%;
+  }
+} */

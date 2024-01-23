@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./styles.module.css";
 import { fetchProducts } from "../../../utils/requests/fetchedData";
 import IntroSection from "../../IntroSection";
+import { CircularProgress } from "@material-ui/core";
 
 interface Product {
   id: number;
@@ -21,15 +22,32 @@ interface Product {
 
 const ProductList = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [visibleProducts, setVisibleProducts] = useState<number>(10);
+  const [loading, setLoading] = useState<boolean>(false);
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const fetchedProducts = await fetchProducts();
+  //     setProducts(fetchedProducts);
+  //   };
+
+  //   fetchData();
+  // }, []);
   useEffect(() => {
-    const fetchData = async () => {
-      const fetchedProducts = await fetchProducts();
-      setProducts(fetchedProducts);
-    };
-
     fetchData();
   }, []);
+
+  const fetchData = async () => {
+    setLoading(true);
+    const fetchedProducts = await fetchProducts();
+    setProducts((prevProducts) => [...prevProducts, ...fetchedProducts]);
+    setLoading(false);
+  };
+
+  const handleLoadMore = () => {
+    console.log("CLICKED");
+    setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 5);
+  };
 
   return (
     <>
@@ -40,7 +58,7 @@ const ProductList = () => {
       />
       <div className={styles.productsContainer}>
         <div className={styles.productGrid}>
-          {products.slice(0, 10).map((product) => (
+          {products.slice(0, visibleProducts).map((product) => (
             <div key={product.id} className={styles.productCard}>
               <img src={product.images[0]} alt={`Product ${product.id}`} />
               <div className={styles.productDetails}>
@@ -64,6 +82,21 @@ const ProductList = () => {
             </div>
           ))}
         </div>
+        {loading ? (
+          <CircularProgress className={styles.loadingSpinner} />
+        ) : (
+          visibleProducts < products.length && (
+            <div className={styles.loadMoreButton}>
+              <button
+                onClick={handleLoadMore}
+                disabled={loading}
+                className={styles.loadBtn}
+              >
+                LOAD MORE PRODUCTS
+              </button>
+            </div>
+          )
+        )}
       </div>
     </>
   );
