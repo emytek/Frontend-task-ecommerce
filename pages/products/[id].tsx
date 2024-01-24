@@ -2,9 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress, Grid, Container } from "@material-ui/core";
 import axios from "axios";
 import SingleProduct from "../../components/products/SingleProduct";
+import BestSeller from "../../components/products/BestSeller";
+import styles from "../../styles/productDetails.module.css";
+import { md } from "../../components/products/SingleProduct/styles/ProductDetailStyle";
 
 const ProductDetail = () => {
   const router = useRouter();
@@ -49,9 +52,25 @@ const ProductDetail = () => {
   return (
     <div>
       <SingleProduct product={product} />
-      <h1>Product Info</h1>
-      <h1>{product?.title}</h1>
-      <p>{product?.description}</p>
+      <BestSeller />
+      <div className={styles.container}>
+        <div className={styles.grid}>
+          {[1, 2, 3, 4, 5, 6].map((index) => (
+            <div key={index} className={styles.gridItem}>
+              <img src={`/imgIcons/${index}.png`} alt={`Image ${index}`} />
+            </div>
+          ))}
+        </div>
+      </div>
+      {/* <Container style={md}>
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
+          {[1, 2, 3, 4, 5, 6].map((index) => (
+            <Grid item key={index} xs={12} sm={6} md={3} lg={2}>
+              <img src={`/imgIcons/${index}.png`} alt={`Image ${index}`} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container> */}
       {/* Add more details as needed */}
     </div>
   );

@@ -1,0 +1,47 @@
+/* YourComponent.module.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.gridItem {
+  width: 100%;
+  max-width: calc(100% - 16px); /* Adjust the width with gap */
+  text-align: center;
+}
+
+/* Add responsive styles if needed */
+@media (min-width: 600px) {
+  .gridItem {
+    max-width: calc(50% - 16px); /* Two items per row for small screens */
+  }
+}
+
+@media (min-width: 960px) {
+  .gridItem {
+    max-width: calc(33.33% - 16px); /* Three items per row for medium screens */
+  }
+}
+
+@media (min-width: 1280px) {
+  .gridItem {
+    max-width: calc(25% - 16px); /* Four items per row for large screens */
+  }
+}
+
+@media (min-width: 1920px) {
+  .gridItem {
+    max-width: calc(
+      16.67% - 16px
+    ); /* Six items per row for extra-large screens */
+  }
+}

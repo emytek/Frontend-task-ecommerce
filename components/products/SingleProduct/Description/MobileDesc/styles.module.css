@@ -1,0 +1,9 @@
+.textSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

@@ -1,6 +1,6 @@
 const addButtonStyle = {
   backgroundColor: "#23A6F0",
-  padding: "10px 20px",
+  //   padding: "10px 20px",
   borderRadius: "5px",
   fontSize: "14px",
   fontWeight: "bold",
@@ -48,4 +48,38 @@ const reviewsStyle = {
   lineHeight: "24px",
   letterSpacing: ".2px",
 };
-export { priceStyle, titleStyle, reviewsStyle, addButtonStyle, info1, info2 };
+
+const textItem = {
+  color: "#737373",
+  fontSize: "14px",
+  lineHeight: "20px",
+  letterSpacing: ".2px",
+  marginTop: "1.4rem",
+};
+
+const textNav = {
+  color: "#737373",
+  fontSize: "14px",
+  fontWeight: "600",
+  lineHeight: "24px",
+  letterSpacing: ".2px",
+};
+
+const md = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  paddingLeft: "3.5rem",
+};
+
+export {
+  priceStyle,
+  titleStyle,
+  reviewsStyle,
+  addButtonStyle,
+  info1,
+  info2,
+  textItem,
+  textNav,
+  md,
+};
