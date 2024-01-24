@@ -35,7 +35,11 @@ const Newnav: React.FC<NewnavProps> = ({ toggleSidebar }) => {
             />
           </Link>
           <div className={styles.mobileicon} onClick={toggleSidebar}>
-            <img src="/icons/menu.png" alt="" />
+            <img
+              src="/icons/menu.png"
+              alt=""
+              style={{ marginBottom: "2.6rem" }}
+            />
           </div>
           <ul className={styles.navmenu}>
             <li className={styles.navitem}>
@@ -60,6 +64,13 @@ const Newnav: React.FC<NewnavProps> = ({ toggleSidebar }) => {
 
           <div className={styles.navbtn}>
             <ul>
+              <li className={styles.navbtnlink1}>
+                <Link href="/vendor-onboard">Become a Vendor</Link>
+              </li>
+
+              <li className={styles.navbtnlink1}>
+                <Link href="/vendor-onboard">Become a Vendor</Link>
+              </li>
               <li className={styles.navbtnlink1}>
                 <Link href="/vendor-onboard">Become a Vendor</Link>
               </li>

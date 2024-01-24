@@ -20,25 +20,64 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
       <div className={styles.sidebarwrapper}>
         <ul className={styles.sidebarmenu}>
           <li className={styles.sidebarlink}>
-            <Link href="/events">Plan Event</Link>
+            <Link href="/events">Home</Link>
           </li>
           <li className={styles.sidebarlink} style={{ paddingRight: ".8rem" }}>
-            <Link href="/new-about">Company</Link>
+            <Link href="/new-about">Shop</Link>
           </li>
           <li className={styles.sidebarlink} style={{ paddingRight: "1.4rem" }}>
-            <span className={styles.contactLink} style={{ cursor: "pointer" }}>
-              Contact
-            </span>
+            About
+          </li>
+          <li className={styles.sidebarlink} style={{ paddingRight: "1.4rem" }}>
+            Blog
+          </li>
+          <li className={styles.sidebarlink} style={{ paddingRight: "1.4rem" }}>
+            Contact
+          </li>
+          <li className={styles.sidebarlink} style={{ paddingRight: "1.4rem" }}>
+            Pages
           </li>
         </ul>
 
-        <div className={styles.sidebtnwrap}>
-          <ul>
-            <li className={styles.sidebtnlink1}>
-              <Link href="/vendor-onboard">Become a Vendor</Link>
-            </li>
-          </ul>
-        </div>
+        {/* <div className={styles.sidebtnwrap}> */}
+        <ul className={styles["social-icons"]} style={{ listStyle: "none" }}>
+          <li>
+            <a href="/vendor-onboard">
+              <img src="/icons/user.png" alt="" className={styles.navIcon} />
+              <span
+                className={styles["bluelink"]}
+                style={{ marginLeft: "6px" }}
+              >
+                Login / Register
+              </span>
+            </a>
+          </li>
+          <li>
+            <img
+              src="/icons/search.png"
+              style={{ marginLeft: "20px" }}
+              alt=""
+              className={styles.navIcon}
+            />
+          </li>
+          <li>
+            <img
+              src="/icons/cart2.png"
+              className={styles.navIcon}
+              style={{ marginLeft: "20px" }}
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="/icons/wish2.png"
+              className={styles.navIcon}
+              style={{ marginLeft: "20px" }}
+              alt=""
+            />
+          </li>
+        </ul>
+        {/* </div> */}
       </div>
     </div>
   );

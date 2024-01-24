@@ -21,13 +21,13 @@ export const links = [
     id: 4,
     url: "/contact",
     text: "Contact",
-    showOnLargeScreen: false,
+    showOnLargeScreen: true,
   },
   {
     id: 5,
     url: "/pages",
     text: "Pages",
-    showOnLargeScreen: false,
+    showOnLargeScreen: true,
   },
 ];
 

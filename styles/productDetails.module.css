@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .grid {
@@ -34,14 +35,6 @@
 
 @media (min-width: 1280px) {
   .gridItem {
-    max-width: calc(25% - 16px); /* Four items per row for large screens */
-  }
-}
-
-@media (min-width: 1920px) {
-  .gridItem {
-    max-width: calc(
-      16.67% - 16px
-    ); /* Six items per row for extra-large screens */
+    max-width: calc(16.67% - 16px); /* Six items per row for large screens */
   }
 }

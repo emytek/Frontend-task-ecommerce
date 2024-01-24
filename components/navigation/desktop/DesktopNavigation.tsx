@@ -80,13 +80,11 @@ const DesktopNav = () => {
 
               // Define linkStyles here
               const linkStyles = {
-                display: shouldDisplay ? "block" : "none",
-                ...(text === "About" && isSmallScreen
-                  ? { color: "#F2656F" }
-                  : {}),
-                ...(text === "get started" && isSmallScreen
-                  ? { color: "#F2656F" }
-                  : {}),
+                color: "#737373",
+                fontSize: "14px",
+                fontWeight: "700",
+                lineHeight: "24px",
+                letterSpacing: ".2px",
               };
               return (
                 <li
@@ -104,22 +102,35 @@ const DesktopNav = () => {
 
         <div className={styles["nav-buttons"]}>
           <ul className={styles["social-icons"]} style={{ listStyle: "none" }}>
-            <li
-              style={{
-                color: "#F2656F",
-                fontSize: "14px",
-                textDecoration: "none",
-                fontStyle: "normal",
-                fontWeight: "500",
-                lineHeight: "normal",
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <a href="/vendor-onboard">start</a>
+            <li>
+              <a href="/vendor-onboard">
+                <img src="/icons/user.png" alt="" />
+                <span className={styles["user"]} style={{ marginLeft: "6px" }}>
+                  Login / Register
+                </span>
+              </a>
             </li>
-            <li></li>
+            <li>
+              <img
+                src="/icons/search.png"
+                style={{ marginLeft: "20px" }}
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="/icons/cart2.png"
+                style={{ marginLeft: "20px" }}
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="/icons/wish2.png"
+                style={{ marginLeft: "20px" }}
+                alt=""
+              />
+            </li>
           </ul>
         </div>
       </div>
