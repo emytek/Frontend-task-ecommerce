@@ -53,7 +53,7 @@ const DesktopNav = () => {
     >
       <div className={styles["nav-center"]}>
         <div className={styles["nav-header"]}>
-          <a href="/">
+          <Link href="/">
             <img
               src="/logo/Bandage.png"
               alt="BandageLogo"
@@ -62,7 +62,7 @@ const DesktopNav = () => {
                 isSmallScreen ? styles["small-image"] : ""
               }`}
             />
-          </a>
+          </Link>
 
           <button
             className={styles["nav-toggle"]}
